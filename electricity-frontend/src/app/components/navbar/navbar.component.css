@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .margin{
+    margin-right: 2%;
+    margin-left: 2%;
+
+  }

@@ -1,0 +1,54 @@
+<div class="outer-wrapper">
+<div class="table-wrapper">
+
+<table *ngIf = "!flag">
+    
+    <tr>
+        <th>Id</th>
+        <th>Applicant Name</th>
+        <th>Gender</th>
+        <th>District</th>
+        <th>State</th>
+        <th>Pincode</th>
+        <th>Ownership</th>
+        <th>Gov Id Type</th>
+        <th>Gov Id Number</th>
+        <th>Category</th>
+        <th>Load</th>
+        <th>Date of Application</th>
+        <th>Date of Approval</th>
+        <th>Modified Date</th>
+        <th>Status</th>
+        <th>Reviewer ID</th>
+        <th>Reviewer Name</th>
+        <th>Reviewer Comments</th>
+    </tr>
+    
+    <tr  *ngFor = "let cust of customer">
+        <td>{{cust.id}}</td>
+        <td>{{cust.applicantName}}</td>
+        <td>{{cust.gender}}</td>
+        <td>{{cust.district}}</td>
+        <td>{{cust.state}}</td>
+        <td>{{cust.pincode}}</td>
+        <td>{{cust.ownership}}</td>
+        <td>{{cust.govt_id}}</td>
+        <td>{{cust.id_number}}</td>
+        <td>{{cust.Category}}</td>
+        <td>{{cust.load}}</td>
+        <td>{{cust.date_of_application}}</td>
+        <td>{{cust.date_of_approval}}</td>
+        <td>{{cust.modified_date}}</td>
+        <td>{{cust.status}}</td>
+        <td>{{cust.reviewer_idl}}</td>
+        <td>{{cust.reviewer_name}}</td>
+        <td>{{cust.reviewer_comments}}</td>
+        <td><button mat-raised-button color="accent" (click)="disable()" routerLink="update/{{cust.id}}">Update</button></td>
+    </tr>
+</table>
+
+</div>
+</div>
+
+<router-outlet></router-outlet>
+

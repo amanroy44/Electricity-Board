@@ -1,0 +1,49 @@
+<mat-card class=center>
+    <h3 style="text-align: center;"> Please enter the Applicant Id </h3>
+    <input type="text" placeholder="Enter ApplicantId" [(ngModel)] = "id" name = id>
+    <button mat-raised-button color="accent" (click)="submit()">Submit</button>
+</mat-card>
+
+<table *ngIf = "flag">
+    <tr>
+        <th>Id</th>
+        <th>Applicant Name</th>
+        <th>Gender</th>
+        <th>District</th>
+        <th>State</th>
+        <th>Pincode</th>
+        <th>Ownership</th>
+        <th>Gov Id Type</th>
+        <th>Gov Id Number</th>
+        <th>Category</th>
+        <th>Load</th>
+        <th>Date of Application</th>
+        <th>Date of Approval</th>
+        <th>Modified Date</th>
+        <th>Status</th>
+        <th>Reviewer ID</th>
+        <th>Reviewer Name</th>
+        <th>Reviewer Comments</th>
+
+    </tr>
+    <tr>
+        <td>{{customer.id}}</td>
+        <td>{{customer.applicantName}}</td>
+        <td>{{customer.gender}}</td>
+        <td>{{customer.district}}</td>
+        <td>{{customer.state}}</td>
+        <td>{{customer.pincode}}</td>
+        <td>{{customer.ownership}}</td>
+        <td>{{customer.govt_id}}</td>
+        <td>{{customer.id_number}}</td>
+        <td>{{customer.Category}}</td>
+        <td>{{customer.load}}</td>
+        <td>{{customer.date_of_application}}</td>
+        <td>{{customer.date_of_approval}}</td>
+        <td>{{customer.modified_date}}</td>
+        <td>{{customer.status}}</td>
+        <td>{{customer.reviewer_idl}}</td>
+        <td>{{customer.reviewer_name}}</td>
+        <td>{{customer.reviewer_comments}}</td>
+    </tr>
+</table>

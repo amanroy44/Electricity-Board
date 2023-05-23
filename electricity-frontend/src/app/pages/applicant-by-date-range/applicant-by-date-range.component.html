@@ -1,0 +1,72 @@
+
+
+<h2>Filter by date</h2>
+<form >
+    <div class = "two-col">
+        <div class = "col1">
+            <label>Start Date:</label>
+            <input type ="text" class= "form-control" placeholder="yyyy-mm-dd"  [(ngModel)]="startDate" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "col2">
+            <label>End Date:</label>
+            <input type ="text" class= "form-control" placeholder="yyyy-mm-dd"  [(ngModel)]="endDate" [ngModelOptions]="{standalone: true}">
+        </div>
+    </div>
+    <button mat-raised-button color="accent" (click)="getDate()">Fetch</button>
+</form>
+
+<div class="outer-wrapper" *ngIf = "flag">
+    <div class="table-wrapper">
+    
+    <table >
+        
+        <tr>
+            <th>Id</th>
+            <th>Applicant Name</th>
+            <th>Gender</th>
+            <th>District</th>
+            <th>State</th>
+            <th>Pincode</th>
+            <th>Ownership</th>
+            <th>Gov Id Type</th>
+            <th>Gov Id Number</th>
+            <th>Category</th>
+            <th>Load</th>
+            <th>Date of Application</th>
+            <th>Date of Approval</th>
+            <th>Modified Date</th>
+            <th>Status</th>
+            <th>Reviewer ID</th>
+            <th>Reviewer Name</th>
+            <th>Reviewer Comments</th>
+        </tr>
+        
+        <tr  *ngFor = "let res of result">
+            <td>{{res.id}}</td>
+            <td>{{res.applicantName}}</td>
+            <td>{{res.gender}}</td>
+            <td>{{res.district}}</td>
+            <td>{{res.state}}</td>
+            <td>{{res.pincode}}</td>
+            <td>{{res.ownership}}</td>
+            <td>{{res.govt_id}}</td>
+            <td>{{res.id_number}}</td>
+            <td>{{res.Category}}</td>
+            <td>{{res.load}}</td>
+            <td>{{res.date_of_application}}</td>
+            <td>{{res.date_of_approval}}</td>
+            <td>{{res.modified_date}}</td>
+            <td>{{res.status}}</td>
+            <td>{{res.reviewer_idl}}</td>
+            <td>{{res.reviewer_name}}</td>
+            <td>{{res.reviewer_comments}}</td>
+            
+    
+    
+            
+        </tr>
+        
+    </table>
+    </div>
+    </div>

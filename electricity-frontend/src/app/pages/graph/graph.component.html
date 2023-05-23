@@ -1,0 +1,11 @@
+<label for="status">Choose a Status: </label>
+<select  #status (change) = "onSelected(status.value)">
+    <option value="Approved" >Approved</option>
+    <option value="Rejected">Rejected</option>
+    <option value="Pending">Pending</option>
+    <option value="Connection Released">Connection Released</option>
+</select>
+
+<div style="width: 600px; height: 600px; margin-top: 10%;" >
+    <canvas id="myChart"></canvas>
+</div>
